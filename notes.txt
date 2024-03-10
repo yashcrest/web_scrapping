@@ -1,0 +1,6 @@
+Python modules and what they are used for:
+
+BeautifulSoup --> for parsing structured Data
+requests --> for making requests to Webpages(GET,POST..etc)
+Selinium --> it's a slimed down browser version that executes JS.
+requests-html --> for rendering JS (as some webpages only sends JS rather than HTML)

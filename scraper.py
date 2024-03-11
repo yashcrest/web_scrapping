@@ -32,5 +32,7 @@ job_elements = results.find_all("div", class_="card-content")
 
 
 # filtering out developer jobs
-developer_jobs = results.find_all("h2", string="Developer")
+developer_jobs = results.find_all(
+    "h2", string=lambda text: "python" in text.lower()
+)
 print(developer_jobs)

@@ -17,10 +17,10 @@ results = soup.find(id="ResultsContainer")
 #finding elements by className
 job_elements = results.find_all("div", class_="card-content")
 
+
 # iterating through job_elements
 # for job_element in job_elements:
 #     # print(job_element, end="\n"*2)
-
 #     # picking up child elements of each job posting
 #     title_element = job_element.find("h2", class_="title")
 #     company_element = job_element.find("h3", class_="company")
@@ -33,6 +33,14 @@ job_elements = results.find_all("div", class_="card-content")
 
 # filtering out developer jobs
 developer_jobs = results.find_all(
-    "h2", string=lambda text: "python" in text.lower()
+    "h2", string=lambda text: "developer" in text.lower()
 )
-print(developer_jobs)
+for developer_job in developer_jobs:
+    job_title = developer_job.find("h2", class_="title")
+    company_title = developer_job.find("h3", class_="company")
+    location_title = developer_job.find("h2", class_="location")
+    print(job_title.text.strip())
+    print(company_title.text.strip())
+    print(location_title.text.strip())
+    print()
+

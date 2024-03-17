@@ -41,6 +41,7 @@ python_job_elements = [
     h2_element.parent.parent.parent for h2_element in developer_jobs
 ]
 
+#extracting job title, location, company name for python jobs
 for job in python_job_elements:
     job_title = job.find('h2', class_="title")
     location_title = job.find('p', class_="location")
@@ -48,4 +49,9 @@ for job in python_job_elements:
     print(job_title.text)
     print(location_title.text.strip())
     print(company_title.text.strip())
-    print()
+    
+    
+    #scrapping links to apply for this job
+    links = job.find_all('a')
+    for link in links:
+        print(link['href'])

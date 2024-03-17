@@ -46,12 +46,12 @@ for job in python_job_elements:
     job_title = job.find('h2', class_="title")
     location_title = job.find('p', class_="location")
     company_title = job.find('h3', class_="company")
+    # extracting APPLY links only
+    apply_link = job.find_all("a")[1]['href']
     print(job_title.text)
     print(location_title.text.strip())
     print(company_title.text.strip())
+    print(f'Apply here: {apply_link}')
     
     
     #scrapping links to apply for this job
-    links = job.find_all('a')
-    for link in links:
-        print(link['href'])

@@ -19,7 +19,7 @@ job_elements = results.find_all("div", class_="card-content")
 
 
 # iterating through job_elements
-# for job_element in job_elements:
+# for job_element in job_elements: 
 #     # print(job_element, end="\n"*2)
 #     # picking up child elements of each job posting
 #     title_element = job_element.find("h2", class_="title")

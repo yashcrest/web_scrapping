@@ -1,5 +1,4 @@
-# trying to automate 
-
+# automating tempo time registration
 import requests 
 from bs4 import BeautifulSoup
 
